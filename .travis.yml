@@ -4,5 +4,6 @@ rvm:
 before_script:
   - npm install -g casperjs
   - bundle exec jekyll serve --detach
+  - phantomjs --version && casperjs --version
 script: 
   - cd test && source engage
