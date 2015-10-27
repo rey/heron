@@ -3,6 +3,6 @@ rvm:
   - 2.1
 before_script:
   - npm install -g casperjs
-script: 
   - bundle exec jekyll serve
+script: 
   - cd test && source engage
