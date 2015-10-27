@@ -6,3 +6,4 @@ before_script:
 script: 
   - bundle exec sass -c assets/sass/style.sass
   - bundle exec jekyll build
+  - cd test && source engage
