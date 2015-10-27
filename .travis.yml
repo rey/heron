@@ -3,4 +3,5 @@ node_js:
   - 4.1.0
 before_script:
   - npm install -g casperjs
-  - phantomjs --version; casperjs --version;
+  - phantomjs --version
+  - casperjs --version
