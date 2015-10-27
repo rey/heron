@@ -1,7 +1,8 @@
-language: node_js
-node_js:
-  - 4.1.0
+language: ruby
+rvm:
+  - 2.1
 before_script:
   - npm install -g casperjs
-  - phantomjs --version
-  - casperjs --version
+script: 
+  - bundle exec sass -c assets/sass/style.sass
+  - bundle exec jekyll build
