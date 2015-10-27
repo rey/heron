@@ -1,0 +1,20 @@
+exclude: [
+  "config.rb",
+  "Procfile",
+  "README",
+  "Gemfile",
+  "Gemfile.lock",
+  "assets/sass",
+  "divshot.json"
+]
+
+title     : The Louie Shipping Co
+author    : Rey Dhuny
+
+encoding  : utf-8
+
+port      : 5000
+
+markdown  : kramdown
+
+timezone  : Europe/London

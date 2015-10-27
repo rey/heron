@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8">  <![endif]-->
+<!--[if gt IE 8]> <html class="no-js">      <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <title>{{ page.title }} &middot; {{ site.title }}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" text="text/css" />
+    <link href="assets/images/favicon.png" rel="shortcut icon" />
+    {% include utility/javascripts_top.html %}
+  </head>
+  <body class="{{ page.title | downcase }}">
+      {{ content }}
+    {% include utility/javascripts_bottom.html %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+  </body>
+</html>

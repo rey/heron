@@ -1,0 +1,60 @@
+.btn
+  +box-shadow(none)
+  text-shadow: none
+
+.btn:active
+  +box-shadow(none)
+
+.btn.disabled,
+.btn[disabled]
+  // background-color: $client_white
+  // border-color: $client_mercury
+  // color: $client_silver
+
+// btn-default
+
+// regular
+.btn-default
+
+// hover
+.btn-default:hover
+  // background-color: $client_white
+  // border-color: $client_mercury
+  // color: $client_lochmara
+
+// active
+.btn-default:active
+  // background-color: $client_white
+  // border-color: $client_mercury
+  // color: $client_lochmara
+
+// btn-primary
+
+// regular
+.btn-primary
+  +bg-gradient-t2b($client_lust, $client_tabasco)
+  +text-shadow(0, -1px, 0, rgba(0,0,0,0.6))
+
+// hover
+.btn-primary:hover
+  +box-shadow(0 0 3px 0 rgba(0,0,0,0.4))
+  // background-color: $client_white
+  border-color: $client_falu_red
+  // color: $client_lochmara
+
+// active
+.btn-primary:active
+  // background-color: $client_white
+  // border-color: $client_lochmara
+  // color: $client_lochmara
+
+// btn-link
+.btn-link
+  // color: $client_lochmara
+
+.btn-link:hover
+  // color: $client_fun_blue
+
+.btn-link.disabled,
+.btn-link[disabled]
+  border: none
