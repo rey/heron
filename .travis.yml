@@ -4,5 +4,5 @@ rvm:
 before_script:
   - npm install -g casperjs
 script: 
-  - foreman start
+  - bundle exec jekyll serve
   - cd test && source engage
