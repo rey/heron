@@ -4,6 +4,5 @@ rvm:
 before_script:
   - npm install -g casperjs
 script: 
-  - bundle exec sass -c assets/sass/style.sass
-  - bundle exec jekyll build
+  - foreman start
   - cd test && source engage
