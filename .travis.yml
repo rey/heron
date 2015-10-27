@@ -1,5 +1,4 @@
 language: ruby
-gemfile: src/Gemfile
 rvm:
   - 2.1
 before_script:
