@@ -1,4 +1,4 @@
-casper.test.begin("Testing 01_home", function suite(test) {
+casper.test.begin("Testing 01_assets", function suite(test) {
 
   casper.start(config.url, function () {
     test.assertHttpStatus(200, "Connected to " + config.url);
