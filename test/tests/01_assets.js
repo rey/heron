@@ -5,6 +5,7 @@ casper.test.begin("Testing 01_assets", function suite(test) {
     test.assertUrlMatch("/", "URL is root");
   });
 
+
   casper.then(function() {
     var cssFiles = this.getElementsAttribute('link[type="text/css"]', 'href');
     cssFiles.forEach(function(css) {
@@ -17,6 +18,10 @@ casper.test.begin("Testing 01_assets", function suite(test) {
     jsFiles.forEach(function(js) {
       test.assertResourceExists(js, js + " was loaded"); 
     });
+  });
+
+  casper.then(function() {
+    this.capture(config.outputFolder  + 'screen_' + Math.random().toString(36).substr(2, 6) + '.png' );
   });
 
   casper.run(function () {
