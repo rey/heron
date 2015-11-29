@@ -6,7 +6,8 @@ exclude: [
   "Gemfile.lock",
   "assets/sass",
   "divshot.json",
-  "vendor"
+  "vendor",
+  "test"
 ]
 
 title     : The Louie Shipping Co
