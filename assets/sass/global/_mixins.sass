@@ -4,23 +4,11 @@
 @function opaque($colour, $opacity)
   @return rgba($colour, $opacity)
 
-// =opaque-white
-//   background-color: rgba(255, 255, 255, 0.4)
-
-// =opaque-black
-//   background-color: rgba(0, 0, 0, 0.4)
-
-=no-padding
-  padding: 0
-
 =o
   outline: 1px solid red !important
 
 =r
   background-color: red !important
-
-// =background-opacity($colour, $opacity: 0.8)
-//   background-color: rgba($colour, $opacity)
 
 =border-radius($radius)
   border-radius: $radius
@@ -117,7 +105,6 @@
     font-weight: $weight
     src: $src
 
-
 =font-smoothing($value: on)
   @if $value == on
     -webkit-font-smoothing: antialiased
@@ -125,7 +112,6 @@
   @else
     -webkit-font-smoothing: subpixel-antialiased
     -moz-osx-font-smoothing: auto
-
 
 body:before
   background-color: pink
