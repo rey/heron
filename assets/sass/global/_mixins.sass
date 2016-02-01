@@ -1,8 +1,26 @@
 @function shade($color, $percent)
   @return mix(black, $color, $percent)
 
-=np
+@function opaque($colour, $opacity)
+  @return rgba($colour, $opacity)
+
+// =opaque-white
+//   background-color: rgba(255, 255, 255, 0.4)
+
+// =opaque-black
+//   background-color: rgba(0, 0, 0, 0.4)
+
+=no-padding
   padding: 0
+
+=o
+  outline: 1px solid red !important
+
+=r
+  background-color: red !important
+
+// =background-opacity($colour, $opacity: 0.8)
+//   background-color: rgba($colour, $opacity)
 
 =border-radius($radius)
   border-radius: $radius
@@ -19,6 +37,16 @@
   -webkit-box-shadow: $shadows
   -moz-box-shadow: $shadows
   box-shadow: $shadows
+
+=input-placeholder()
+  input::-webkit-input-placeholder
+    @content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
 
 @mixin text-shadow($horizOffset, $vertOffset, $blur, $color)
   -webkit-text-shadow: $horizOffset $vertOffset $blur $color
@@ -48,6 +76,8 @@
       @content
   @else
     @warn "Breakpoint mixin supports: xs, sm, md, lg"
+
+
 
 // Background Gradient: Top to Bottom
 =bg-gradient-t2b($start-colour, $end-colour)
@@ -97,50 +127,12 @@
     -moz-osx-font-smoothing: auto
 
 
-// @include keyframes(slide-down) {
-//  0% { opacity: 1; }
-//  90% { opacity: 0; }
-// }
-=keyframes($animation-name)
-  @-webkit-keyframes #{$animation-name}
-    @content
-
-  @-moz-keyframes #{$animation-name}
-    @content
-
-  @-ms-keyframes #{$animation-name}
-    @content
-
-  @-o-keyframes #{$animation-name}
-    @content
-
-  @keyframes #{$animation-name}
-    @content
-
-// .element {
-//  width: 100px;
-//  height: 100px;
-//  background: black;
-//  @include animation('slide-down 5s 3');
-// }
-=animation($str)
-  -webkit-animation: #{$str}
-  -moz-animation: #{$str}
-  -ms-animation: #{$str}
-  -o-animation: #{$str}
-  animation: #{$str}
-
-// a {
-//  color: gray;
-//  @include transition(color .3s ease);
-//  &:hover {
-//    color: black;
-///  }
-//}
-=transition($args...)
-  -webkit-transition: $args
-  -moz-transition: $args
-  -ms-transition: $args
-  -o-transition: $args
-  transition: $args
-
+body:before
+  background-color: pink
+  content: "xs"
+  +breakpoint(sm)
+    content: "sm"
+  +breakpoint(md)
+    content: "md"
+  +breakpoint(lg)
+    content: "lg"
