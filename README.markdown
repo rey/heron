@@ -1,4 +1,4 @@
-# Heron
+# Heron [![Build Status](https://travis-ci.org/rey/heron.svg?branch=master)](https://travis-ci.org/rey/heron)
 
 ## To develop
 
