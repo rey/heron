@@ -3,7 +3,7 @@
 ## To develop
 
 ```
-cd src
+cd heron
 bundle
 foreman start
 ```
